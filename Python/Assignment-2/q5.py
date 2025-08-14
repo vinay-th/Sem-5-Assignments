@@ -12,6 +12,7 @@ cities = {
 
 # IMPORTANT
 # How to do it with Normal For loop code
+# the cities.items() gives you the key-value pairs in tuple format
 cleaned_cities = {}
 for city, temp in cities.items():
     if 15 <= temp <= 40:
@@ -20,7 +21,6 @@ for city, temp in cities.items():
 
 # NOT IMPORTANT
 # Advance code (Only if you want to optimize, one line code)
-# the cities.items() gives you the key-value pairs in tuple format
 # We use dictionary comprehension to do such task
 # {key_var : value_var for item in iterable if condition}
 
