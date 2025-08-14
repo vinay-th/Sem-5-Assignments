@@ -8,6 +8,7 @@ def isPrime(n):
             return False
     return True
 
+# Using _ as a throwaway(temporary) variable
 for _ in range(10):
     num = int(input("Enter a number: "))
     if isPrime(num):
