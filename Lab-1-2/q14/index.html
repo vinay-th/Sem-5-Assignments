@@ -1,0 +1,14 @@
+<!-- 14 Create a php program to perform the following:
+• Create a registration form that collects name and email.
+• On submit, pass the data to another page using POST.
+• On the second page, show a message: “Thank you, [Name], for registering with the
+email: [Email]”. -->
+<form method="POST" action="register.php">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required /><br />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required /><br />
+
+  <input type="submit" value="Register" />
+</form>
