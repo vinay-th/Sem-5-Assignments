@@ -1,15 +1,19 @@
 import tkinter as tk
 
+def show_value():
+    lbl.config(text=f"You have selected: {var.get()}")
+
 root = tk.Tk()
-root.title("Select a language")
-root.geometry("300x400")
+root.title("Select language: ")
 
-var = tk.StringVar(value="")
+var = tk.StringVar(value="None")
 
-tk.Radiobutton(root, text="Python", variable=var, value="Python").pack()
-tk.Radiobutton(root, text="Perl", variable=var, value="Perl").pack()
-tk.Radiobutton(root, text="Java", variable=var, value="Java").pack()
-tk.Radiobutton(root, text="C", variable=var, value="C").pack()
-tk.Radiobutton(root, text="C++", variable=var, value="C++").pack()
+languages = ["Python", "Perl", "Java", "C", "C++"]
+
+for lan in languages:
+    tk.Radiobutton(root, text=lan, variable=var, value=lan, command=show_value).pack()
+
+lbl = tk.Label(root, text="Select language:")
+lbl.pack(pady=20, padx=20)
 
 root.mainloop()
