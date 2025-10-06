@@ -1,8 +1,6 @@
 # 5. Write a program to raise an exception if number is negative
 class NegativeNumError(Exception):
-    def __init__(self, message):
-        self.message = message
-        super().__init__(self.message)
+    pass
 try:
     num = int(input("Enter a POSITIVE number: "))
 
